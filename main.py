@@ -37,8 +37,8 @@ def getGamePassList():
             if key == 'id':
                 gamesList.append(val)
     #get games? 2
-    for game in gamesList:
-        print(game)
+    #for game in gamesList:
+        #print(game)
 
     url = "https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds="
 
@@ -47,7 +47,7 @@ def getGamePassList():
         #url += game + ","
 
     for i in range(20):
-        url += game + ","
+        url += gamesList[i] + ","
 
     url = url[:-1]
     url += "&market=US&languages=en-us&MS-CV=DGU1mcuYo0WMMp"

@@ -2,10 +2,18 @@
     {%block content %}
         <div>
             {% for datas in data %}
-                <span>{{datas['ProductType'] }}</span>
                 {%for names in datas["LocalizedProperties"] %}
                     <p>{{ names['ProductTitle'] }}</p>
+                    {%for images in names['Images']%}
+                        {%if images['ImagePurpose'] == 'Poster' %}
+                            <img src={{ images['Uri'] }}>
+                        {% endif %}
+                        <!-- <img src={{ images['Uri'] }}> -->
+                        
+                        
+                    {% endfor %}
                 {% endfor %}
+
             {% endfor %}
         </div>
     {%endblock content%}
