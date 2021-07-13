@@ -36,7 +36,7 @@ def getGamePassList():
         for key,val in ids.items():
             if key == 'id':
                 gamesList.append(val)
-
+    #get games?
     for game in gamesList:
         print(game)
 
