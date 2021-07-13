@@ -1,0 +1,11 @@
+    {% extends 'layout.html' %}
+    {%block content %}
+        <div>
+            {% for datas in data %}
+                <span>{{datas['ProductType'] }}</span>
+                {%for names in datas["LocalizedProperties"] %}
+                    <p>{{ names['ProductTitle'] }}</p>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    {%endblock content%}
